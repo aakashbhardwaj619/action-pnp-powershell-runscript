@@ -1,0 +1,22 @@
+name: 'PnP PowerShell Run Script'
+description: 'Runs a PnP PowerShell script'
+inputs:
+  SHAREPOINT_SITE_URL:
+    description: 'URL of the SharePoint Site'
+    required: true
+  ADMIN_USERNAME:
+    description: 'Username of the admin'
+    required: true
+  ADMIN_PASSWORD:
+    description: 'Password of the admin'
+    required: true
+  PNP_POWERSHELL_SCRIPT:
+    description: 'PnP PowerShell script'
+  PNP_POWERSHELL_SCRIPT_PATH:
+    description: 'Relative path of the script in your repo'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'terminal'  
+  color: 'blue'
